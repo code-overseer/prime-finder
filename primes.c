@@ -21,7 +21,8 @@ static int find_bigger_prime(int n)
 int find_next_prime(int const n)
 {
     if (n <= prime_array[0]) return prime_array[0];
-    if (n >= prime_array[9999]) return find_bigger_prime(n);
+    if (n == prime_array[9999]) return prime_array[9999];
+    if (n > prime_array[9999]) return find_bigger_prime(n);
     int min = 0;
     int max = 9999;
     
