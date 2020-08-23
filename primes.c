@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
 #include "primes.h"
 
 int const prime_array[10000] = PRIME_10000;
