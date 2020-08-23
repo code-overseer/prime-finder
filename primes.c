@@ -31,5 +31,3 @@ int find_next_prime(int const n)
 
     return prime_array[max];
 }
-
-
