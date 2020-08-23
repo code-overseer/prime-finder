@@ -5,7 +5,7 @@
 
 int const prime_array[10000] = PRIME_10000;
 
-int find_bigger_prime(int n)
+static int find_bigger_prime(int n)
 {
 	n |= 0x1;
 	for (int i = 1; i < 10000 && prime_array[i] * prime_array[i] <= n; ++i)
