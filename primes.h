@@ -1,6 +1,4 @@
 
-int get_min_prime(void);
-int get_max_prime(void);
 int find_next_prime(int const n);
 
 #define PRIME_10000 \
