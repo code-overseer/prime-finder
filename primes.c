@@ -1,21 +1,23 @@
 #include "primes.h"
+#include "stdio.h"
 
-int const prime_array[10000] = PRIME_10000;
+unsigned int const prime_array[10000] = PRIME_10000;
 
-static int find_bigger_prime(int n)
+static unsigned long long find_bigger_prime(unsigned long long n)
 {
     n |= 0x1;
-    for (int i = 1; i < 10000 && prime_array[i] * prime_array[i] <= n; ++i)
+    for (int i = 1; i < 10000 && ((unsigned long long)prime_array[i] * (unsigned long long)prime_array[i]) <= n; ++i)
     {
+
         char b = !(n % prime_array[i]);
         n += b * 2;
-        i = b + !b * i;
+        i = !b * i;
     }
 
     return n;
 }
 
-int find_next_prime(int const n)
+unsigned long long find_next_prime(unsigned long long const n)
 {
     if (n > prime_array[9999]) return find_bigger_prime(n);
     int min = (n == prime_array[9999]) * 9999;

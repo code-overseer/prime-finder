@@ -1,5 +1,5 @@
 
-int find_next_prime(int const n);
+unsigned long long find_next_prime(unsigned long long const n);
 
 #define PRIME_10000 \
 { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, \

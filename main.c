@@ -5,10 +5,10 @@
 int main(int argc, char** argv)
 {
     if (argc != 2) return -1;
-    int val = atoi(argv[1]);
+    unsigned long long val = (unsigned long long)atoll(argv[1]);
 
-    int prime = find_next_prime(val);
-    printf("value: %i\nprime: %i\n", val, prime);
+    unsigned long long prime = find_next_prime(val);
+    printf("value: %llu\nprime: %llu\n", val, prime);
 
     return 0;
 }
